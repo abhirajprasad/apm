@@ -2,17 +2,6 @@
 
 A professional, modern crypto website built with Next.js and TypeScript. This is the world's first Autonomous Prediction Market Agent platform.
 
-## Features
-
-- 🎨 Professional crypto-themed design with gradient animations
-- 🎮 Interactive 3D scene with rotating geometric objects (Three.js)
-- ⏱️ Real-time countdown timer
-- 📊 Professional stats dashboard
-- 🎯 Key features section
-- 📱 Fully responsive design
-- ⚡ Built with Next.js 14 and TypeScript
-- 🎭 Tailwind CSS for styling
-- 🌐 React Three Fiber for 3D graphics
 
 ## Getting Started
 
