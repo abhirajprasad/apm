@@ -1,5 +1,6 @@
 'use client';
 
+import CountdownTimer from '@/components/CountdownTimer';
 import Scene3D from '@/components/Scene3D';
 import { useState, useEffect } from 'react';
 
@@ -59,6 +60,46 @@ export default function Home() {
               <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto leading-relaxed">
                 Revolutionizing prediction markets with autonomous AI agents that create, manage, and optimize markets 24/7
               </p>
+            </div>
+
+            {/* Stats Section */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 pt-8">
+              <div className="px-6 py-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  $2.4M
+                </div>
+                <div className="text-sm md:text-base text-white/50 mt-2">Total Volume</div>
+              </div>
+              <div className="px-6 py-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  1,247
+                </div>
+                <div className="text-sm md:text-base text-white/50 mt-2">Active Markets</div>
+              </div>
+              <div className="px-6 py-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  24/7
+                </div>
+                <div className="text-sm md:text-base text-white/50 mt-2">Autonomous</div>
+              </div>
+              <div className="px-6 py-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  99.9%
+                </div>
+                <div className="text-sm md:text-base text-white/50 mt-2">Uptime</div>
+              </div>
+            </div>
+
+            {/* Countdown Section */}
+            <div className="pt-8 space-y-6">
+              <div className="text-lg md:text-xl text-white/50 font-medium">
+                Next Market Creation In
+              </div>
+              <div className="flex justify-center">
+                <div className="px-8 md:px-12 py-6 md:py-8 rounded-2xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20 border border-cyan-500/30 backdrop-blur-sm shadow-[0_0_30px_rgba(0,212,255,0.3)]">
+                  <CountdownTimer />
+                </div>
+              </div>
             </div>
 
             {/* CTA Buttons */}
