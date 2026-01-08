@@ -1,6 +1,7 @@
 'use client';
 
 import Scene3D from '@/components/Scene3D';
+import APMLogo from '@/components/APMLogo';
 import { useState, useEffect } from 'react';
 
 export default function Home() {
@@ -25,29 +26,36 @@ export default function Home() {
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Header */}
-        <header className="w-full px-6 md:px-12 py-8 flex justify-between items-center">
-          <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            APM
+        <header className="w-full px-6 md:px-12 py-4 md:py-6 flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <APMLogo />
           </div>
-          <nav className="hidden md:flex gap-8">
-            <a href="#features" className="text-white/70 hover:text-white transition-colors">Features</a>
-            <a href="#markets" className="text-white/70 hover:text-white transition-colors">Markets</a>
-            <a href="#about" className="text-white/70 hover:text-white transition-colors">About</a>
+          <nav className="hidden md:flex gap-8 items-center">
+            <a href="#markets" className="text-white/70 hover:text-white transition-colors flex items-center gap-2 group">
+              Markets
+              <span className="relative inline-flex items-center">
+                <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-sm opacity-50 animate-pulse"></span>
+                <span className="relative px-2 py-0.5 text-[10px] font-bold bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-full border border-cyan-400/50 shadow-lg shadow-cyan-500/30 animate-bounce">
+                  COMING SOON
+                </span>
+              </span>
+            </a>
+            <a href="#contact" className="text-white/70 hover:text-white transition-colors">About</a>
           </nav>
-          <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+          {/* <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-semibold hover:opacity-90 transition-opacity">
             Connect Wallet
-          </button>
+          </button> */}
         </header>
 
         {/* Hero Section */}
-        <section className="flex-1 flex flex-col items-center justify-center px-4 md:px-8 py-12 md:py-20">
-          <div className="w-full max-w-7xl mx-auto text-center space-y-8 md:space-y-12">
+        <section className="flex-1 flex flex-col items-center justify-center px-4 md:px-8 py-4 md:py-8 min-h-0">
+          <div className="w-full max-w-7xl mx-auto text-center space-y-6 md:space-y-8">
             {/* Main Title */}
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <div className="inline-block px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-sm font-medium">
                 WORLD&apos;S FIRST
               </div>
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
                   Autonomous Prediction
                 </span>
@@ -56,14 +64,22 @@ export default function Home() {
                   Market Agent
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-white/60 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-white/60 max-w-3xl mx-auto leading-relaxed">
               The Engine That Doesn&apos;t Just Predict — It Drives Reality
               </p>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-cyan-500/25">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <button className="relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity shadow-lg shadow-cyan-500/25">
+                <span className="absolute -top-2 -right-2 z-10 transform rotate-12">
+                  <span className="relative inline-flex items-center">
+                    <span className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 rounded-[20px] blur-md opacity-60 animate-pulse"></span>
+                    <span className="relative px-3 py-1.5 text-xs font-bold bg-gradient-to-r from-yellow-400 via-amber-400 to-yellow-500 text-black rounded-[20px] border-2 border-amber-300/80 shadow-lg shadow-yellow-500/50 whitespace-nowrap">
+                      Coming Soon
+                    </span>
+                  </span>
+                </span>
                 Explore Markets
               </button>
               <button className="px-8 py-4 bg-white/5 border border-white/20 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
@@ -109,7 +125,7 @@ export default function Home() {
               
               <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                 {/* Point 1 */}
-                <div className="group p-6 md:p-8 rounded-2xl bg-gradient-to-br from-cyan-500/10 via-purple-500/5 to-cyan-500/10 backdrop-blur-sm border border-cyan-500/20 hover:border-cyan-500/40 transition-all hover:shadow-lg hover:shadow-cyan-500/20">
+                <div className="group float-animation float-delay-1 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-cyan-500/10 via-purple-500/5 to-cyan-500/10 backdrop-blur-sm border border-cyan-500/20 hover:border-cyan-500/40 transition-all hover:shadow-lg hover:shadow-cyan-500/20">
                   <h3 className="text-lg md:text-xl font-semibold text-white mb-3">
                     Cheap YES isn&apos;t a gamble
                   </h3>
@@ -119,7 +135,7 @@ export default function Home() {
                 </div>
 
                 {/* Point 2 */}
-                <div className="group p-6 md:p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 via-cyan-500/5 to-purple-500/10 backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all hover:shadow-lg hover:shadow-purple-500/20">
+                <div className="group float-animation float-delay-2 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 via-cyan-500/5 to-purple-500/10 backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all hover:shadow-lg hover:shadow-purple-500/20">
                   <h3 className="text-lg md:text-xl font-semibold text-white mb-3">
                     Prediction becomes propulsion
                   </h3>
@@ -129,7 +145,7 @@ export default function Home() {
                 </div>
 
                 {/* Point 3 */}
-                <div className="group p-6 md:p-8 rounded-2xl bg-gradient-to-br from-cyan-500/10 via-purple-500/5 to-cyan-500/10 backdrop-blur-sm border border-cyan-500/20 hover:border-cyan-500/40 transition-all hover:shadow-lg hover:shadow-cyan-500/20">
+                <div className="group float-animation float-delay-3 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-cyan-500/10 via-purple-500/5 to-cyan-500/10 backdrop-blur-sm border border-cyan-500/20 hover:border-cyan-500/40 transition-all hover:shadow-lg hover:shadow-cyan-500/20">
                   <h3 className="text-lg md:text-xl font-semibold text-white mb-3">
                     Participants aren&apos;t guessing — they&apos;re doing
                   </h3>
@@ -139,7 +155,7 @@ export default function Home() {
                 </div>
 
                 {/* Point 4 */}
-                <div className="group p-6 md:p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 via-cyan-500/5 to-purple-500/10 backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all hover:shadow-lg hover:shadow-purple-500/20">
+                <div className="group float-animation float-delay-4 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 via-cyan-500/5 to-purple-500/10 backdrop-blur-sm border border-purple-500/20 hover:border-purple-500/40 transition-all hover:shadow-lg hover:shadow-purple-500/20">
                   <h3 className="text-lg md:text-xl font-semibold text-white mb-3">
                     The future isn&apos;t predicted — it&apos;s purchased
                   </h3>
@@ -147,32 +163,6 @@ export default function Home() {
                     With APM, the future isn&apos;t predicted — it&apos;s <span className="text-purple-400 font-semibold">purchased into existence</span>.
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section id="features" className="relative z-10 w-full px-4 md:px-8 py-20 bg-gradient-to-b from-transparent to-black/20">
-          <div className="w-full max-w-7xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Key Features
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
-              <div className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all">
-                <div className="text-4xl mb-4">🤖</div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Autonomous AI</h3>
-                <p className="text-white/60">Self-managing agents that create and optimize markets continuously</p>
-              </div>
-              <div className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all">
-                <div className="text-4xl mb-4">⚡</div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Lightning Fast</h3>
-                <p className="text-white/60">Built on Solana for instant transactions and minimal fees</p>
-              </div>
-              <div className="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all">
-                <div className="text-4xl mb-4">🔒</div>
-                <h3 className="text-xl font-semibold mb-2 text-white">Decentralized</h3>
-                <p className="text-white/60">Fully on-chain, transparent, and trustless market operations</p>
               </div>
             </div>
           </div>
@@ -187,6 +177,47 @@ export default function Home() {
             </div>
           </div>
         )}
+
+        {/* Footer */}
+        <footer id="contact" className="relative z-10 w-full px-6 md:px-12 py-8 md:py-12 border-t border-white/10 bg-gradient-to-b from-transparent to-black/20">
+          <div className="w-full max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8">
+              {/* Powered By Section */}
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                <div className="text-sm text-white/60">
+                  Powered by <span className="text-white/80 font-semibold">Solana</span>
+                </div>
+                <div className="text-sm text-white/60">
+                  Powered by <span className="text-white/80 font-semibold">PNP SDK</span>
+                </div>
+                <div className="text-sm font-semibold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  PNP × APM
+                </div>
+              </div>
+
+              {/* Social & Contact */}
+              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+                {/* X (Twitter) Button */}
+                <a
+                  href="https://twitter.com/apm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all text-white/70 hover:text-white text-sm font-medium flex items-center gap-2"
+                >
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                  <span>X</span>
+                </a>
+
+                {/* Contact */}
+                <div className="text-sm text-white/60">
+                  Contact: <a href="mailto:contact@apm.com" className="text-white/80 hover:text-white transition-colors">contact@apm.com</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </main>
   );

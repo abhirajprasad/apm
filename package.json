@@ -25,6 +25,17 @@
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.5.3"
-  }
+  },
+  "description": "A professional, modern crypto website built with Next.js and TypeScript. This is the world's first Autonomous Prediction Market Agent platform.",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhirajprasad/apm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhirajprasad/apm/issues"
+  },
+  "homepage": "https://github.com/abhirajprasad/apm#readme"
 }
-
